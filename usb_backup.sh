@@ -102,6 +102,7 @@ if [ $sdcard -eq 1 -a $storedrive -eq 1 ];then
                         if  [ $? -eq 0 ]; then
                                 find "$SD_MOUNTPOINT"/DCIM -depth -type f -iname ".*" -exec rm {} \;
                                 find "$SD_MOUNTPOINT"/DCIM/* -depth -type d -exec rmdir {} \;
+                                find "$SD_MOUNTPOINT"/AVF_INFO/* -depth -type f -exec rm -f {} \;
                                 echo "$(date) - SD copy complete" >> "$LOG_FILE"
                         else
                                 echo "$(date) - Didn't finish moving files from incoming" >> "$LOG_FILE"

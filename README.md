@@ -20,6 +20,7 @@ Here are my changes:
   - Remove `MEDIA_REGEX` as I want to avoid removing wrong files by mistake
   - Remove files from SD card when copied (using `--remove-source-files` option of rsync)
   - Backup video as well (`PRIVATE` directory)
+  - Remove files in `AVF_INFO` to reset the file indexing
 - Rename some paths and files
 
 
